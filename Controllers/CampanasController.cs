@@ -15,11 +15,23 @@ namespace PortalCampanas.Controllers
             new Campana { Id = 3, Nombre = "Cyber Moda", Categoria = "Moda", Estado = "Finalizada", FechaInicio = DateTime.Now.AddDays(-30), FechaFin = DateTime.Now.AddDays(-15), DescuentoPct = 60, Canal = "App", Descripcion = "Remate de temporada" }
         };
 
-        public IActionResult Index()
+       public IActionResult Index(string categoriaBuscada)
         {
-            return View(_campanas);
-        }
+            // Guardamos la palabra en el ViewBag para que no se borre de la pantalla
+            ViewBag.CategoriaFiltro = categoriaBuscada;
 
+            // Empezamos con toda la lista
+            var campanasFiltradas = _campanas.AsQueryable();
+
+            // Si el usuario escribió algo, filtramos la lista
+            if (!string.IsNullOrEmpty(categoriaBuscada))
+            {
+                campanasFiltradas = campanasFiltradas.Where(c => c.Categoria.Contains(categoriaBuscada, StringComparison.OrdinalIgnoreCase));
+            }
+
+            // Enviamos la lista filtrada a la vista
+            return View(campanasFiltradas.ToList());
+        }
         public IActionResult Detalle(int id)
         {
             var campana = _campanas.FirstOrDefault(c => c.Id == id);
