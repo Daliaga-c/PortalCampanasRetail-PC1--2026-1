@@ -1,0 +1,45 @@
+@model PortalCampanas.Models.Campana
+
+@{
+    ViewData["Title"] = "Detalle de Campaña";
+}
+
+<div class="container mt-4">
+    <h2 class="text-primary mb-3"><i class="bi bi-info-circle"></i> Detalle de la Campaña</h2>
+    
+    <div class="card shadow-sm border-0">
+        <div class="card-header bg-dark text-white">
+            <h4 class="mb-0">@Model.Nombre</h4>
+        </div>
+        <div class="card-body">
+            <dl class="row mb-0">
+                <dt class="col-sm-3 text-muted">Categoría</dt>
+                <dd class="col-sm-9 fw-bold">@Model.Categoria</dd>
+
+                <dt class="col-sm-3 text-muted">Estado</dt>
+                <dd class="col-sm-9">
+                    <span class="badge @(Model.Estado == "Vigente" ? "bg-success" : Model.Estado == "Próxima" ? "bg-primary" : "bg-secondary") fs-6">
+                        @Model.Estado
+                    </span>
+                </dd>
+
+                <dt class="col-sm-3 text-muted">Canal de Venta</dt>
+                <dd class="col-sm-9">@Model.Canal</dd>
+
+                <dt class="col-sm-3 text-muted">Descuento</dt>
+                <dd class="col-sm-9 text-danger fw-bold fs-5">@Model.DescuentoPct%</dd>
+
+                <dt class="col-sm-3 text-muted">Fechas</dt>
+                <dd class="col-sm-9">
+                    @Model.FechaInicio.ToString("dd/MM/yyyy") <span class="text-muted">al</span> @Model.FechaFin.ToString("dd/MM/yyyy")
+                </dd>
+
+                <dt class="col-sm-3 text-muted">Descripción</dt>
+                <dd class="col-sm-9">@Model.Descripcion</dd>
+            </dl>
+        </div>
+        <div class="card-footer bg-light text-end">
+            <a asp-action="Index" class="btn btn-secondary px-4">Volver al Listado</a>
+        </div>
+    </div>
+</div>
