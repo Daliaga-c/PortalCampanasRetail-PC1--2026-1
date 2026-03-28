@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto Campana\\PortalCampanas\\PortalCampanas.csproj": {}
+    "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto Campana\\PortalCampanasRetail-PC1--2026-1\\PortalCampanas.csproj": {}
   },
   "projects": {
-    "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto Campana\\PortalCampanas\\PortalCampanas.csproj": {
+    "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto Campana\\PortalCampanasRetail-PC1--2026-1\\PortalCampanas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto Campana\\PortalCampanas\\PortalCampanas.csproj",
+        "projectUniqueName": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto Campana\\PortalCampanasRetail-PC1--2026-1\\PortalCampanas.csproj",
         "projectName": "PortalCampanas",
-        "projectPath": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto Campana\\PortalCampanas\\PortalCampanas.csproj",
+        "projectPath": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto Campana\\PortalCampanasRetail-PC1--2026-1\\PortalCampanas.csproj",
         "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto Campana\\PortalCampanas\\obj\\",
+        "outputPath": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto Campana\\PortalCampanasRetail-PC1--2026-1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config"
