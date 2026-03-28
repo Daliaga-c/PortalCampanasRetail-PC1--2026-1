@@ -17,6 +17,7 @@ namespace PortalCampanas.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.TotalCampanas = _campanas.Count; // O algo similar del resumen
             return View(_campanas);
         }
 
