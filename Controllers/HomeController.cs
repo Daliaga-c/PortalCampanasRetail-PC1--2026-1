@@ -1,24 +1,20 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using PortalCampanas.Models;
+using System.Diagnostics;
+using PortalCampanas.Models; // Asegúrate que este sea el nombre de tu proyecto
+using PortalCampanas.Data;
 
-namespace PortalCampanas.Controllers;
-
-public class HomeController : Controller
+namespace PortalCampanas.Controllers
 {
-    public IActionResult Index()
+    public class HomeController : Controller
     {
-        return View();
-    }
+        public IActionResult Index()
+        {
+            return View(CampanaData.Listado);
+        }
 
-    public IActionResult Privacy()
-    {
-        return View();
-    }
-
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        public IActionResult Privacy()
+        {
+            return View();
+        }
     }
 }
