@@ -17,6 +17,7 @@ namespace PortalCampanas.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.FiltroActivo = true; // Código exclusivo de la rama filtro
             return View(_campanas);
         }
 
